@@ -31,7 +31,7 @@ def pre_process_data(in_file: str, out_file: str, features: int = 300, normalize
     :param lines: number of lines to process, 0 for all
     :return: None
     """
-    with open(in_file, 'r') as in_file:
+    with open(in_file, 'r', encoding="utf8") as in_file:
         with open(out_file, mode="w", encoding="utf8") as out_file:
             if skip_1st:
                 in_file.readline()

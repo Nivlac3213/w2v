@@ -45,7 +45,7 @@ class Model(list):
         super().__init__()
         print(f"Loading model from {inp_file_name} ...")
         t0 = process_time()
-        with open(inp_file_name) as inp_file:
+        with open(inp_file_name, mode="r", encoding="utf8") as inp_file:
             for line in inp_file:
                 sa = line.split()
                 self.append(Word(sa[0], [float(x) for x in sa[1:]]))
