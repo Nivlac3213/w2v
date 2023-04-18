@@ -12,3 +12,5 @@ woman = model.find_word("woman")
 q = king - man + woman
 q.normalize()
 print(model.find_similar_words(q, 10))
+
+

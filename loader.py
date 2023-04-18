@@ -9,8 +9,9 @@ from math import sqrt
 
 def google_news():
     """ bin to text, takes a really long time and creates a 10GB file"""
-    model = KeyedVectors.load_word2vec_format('models/GoogleNews-vectors-negative300.bin', binary=True)
-    model.save_word2vec_format('models/googlenews.txt')
+    # model = KeyedVectors.load_word2vec_format('models/GoogleNews-vectors-negative300.bin', binary=True)
+    # model.save_word2vec_format('models/googlenews.txt')
+    pass
 
 
 def normalize_to_str(v: [float]) -> str:
@@ -53,5 +54,6 @@ if __name__ == "__main__":
     # from gensim.models import KeyedVectors
     # google_news()
     # pre_process_data("models/googlenews.txt", "models/google_short.txt", lines=100_000)
-    pre_process_data("models/wiki-news-300d-1M.txt", 'models/wiki_short.txt', lines=100_000)
-    pre_process_data("models/glove.840B.300d.txt", "models/glove_short.txt", lines=100_000, skip_1st=False)
+    # pre_process_data("models/wiki-news-300d-1M.txt", 'models/wiki_short.txt', lines=100_000)
+    pre_process_data("models/glove.840B.300d.txt", "models/glove_short.txt",
+                     lines=100_000, skip_1st=False)
